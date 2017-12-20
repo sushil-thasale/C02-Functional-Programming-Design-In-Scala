@@ -104,5 +104,4 @@ class BloxorzSuite extends FunSuite {
       assert(actualresult == expectedResult)
     }
   }
-
 }

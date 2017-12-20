@@ -65,7 +65,7 @@ trait Solver extends GameDef {
    */
   def from(initial: Stream[(Block, List[Move])],
            explored: Set[Block]): Stream[(Block, List[Move])] = initial match {
-    case Stream.empty => Stream.empty
+    case Stream.Empty => Stream.empty
     case (block, moves) #:: rest => {
 //      implementing bfs
 //      finding paths to children
@@ -96,7 +96,7 @@ trait Solver extends GameDef {
    * position.
    */
   lazy val solution: List[Move] = pathsToGoal match {
-    case Stream.empty => Nil
+    case Stream.Empty => Nil
     case (block, moves) #:: rest => moves.reverse
   }
 }
