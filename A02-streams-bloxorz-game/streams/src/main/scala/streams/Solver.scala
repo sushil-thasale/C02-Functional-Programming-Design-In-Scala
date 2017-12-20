@@ -70,7 +70,7 @@ trait Solver extends GameDef {
 //      implementing bfs
 //      finding paths to children
       val pathsToChildren = newNeighborsOnly(neighborsWithHistory(block, moves), explored + block)
-      pathsToChildren ++ from(rest, explored + block)
+      pathsToChildren ++ from(rest ++ pathsToChildren, explored + block)
     }
   }
 
